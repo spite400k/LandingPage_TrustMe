@@ -1,0 +1,1088 @@
+/* normalize */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+body,html{background:#fff;font-size:14px}
+input,textarea{border:none;outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+a,a *,div,div *{-webkit-tap-highlight-color:rgba(255, 165, 0, 0.25)}
+a{overflow:hidden;outline:none}
+a:hover{text-decoration:none}
+article,section,table,tbody{display:block}
+table{border-collapse:collapse}
+fieldset,img{border:0;vertical-align:top}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0}
+figure{margin:0 !important}
+.clearfix{width:100%}
+.clearfix:after{content:"";display:block;clear:both}
+p{word-wrap:break-word}
+*{-webkit-touch-callout:none}
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/* *:before, *:after{pointer-events:none;} *//* common */
+
+
+
+
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    overflow: hidden;
+    outline: none;
+    text-decoration: none;
+}
+a, img, :after, :before {
+    color: #C9E167;
+    text-decoration: none;
+    transition: 0.1s ease-in-out;
+}
+a:visited {}
+a:link {}
+a:hover {
+    opacity: 0.5;
+}
+
+
+/* common */
+body{
+    -webkit-text-size-adjust:100%;
+    font-family: 'Lato', "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "Yu Gothic", YuGothic, "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ã‚·ãƒƒã‚¯ Pro", "Hiragino Kaku Gothic Pro", 'ãƒ¡ã‚¤ãƒªã‚ª' , Meiryo , Osaka, "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+    position:relative;
+    font-size:14px;
+    line-height:30px;
+    color:#444;
+    min-width:1000px;
+}
+
+
+section {
+    position: relative;
+}
+h1.contentTitle {
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 900;
+    color: #C9E167;
+    text-align: center;
+    padding: 120px 0 120px 3px;
+    letter-spacing: 3px;
+    position: relative;
+    -webkit-text-stroke: 1px #bdd55f; /* 縁取り */
+    text-stroke: 1px #000; /* 縁取り */
+}
+h1.contentTitle:before {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #C9E167;
+    position: absolute;
+    top: 0;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.5;
+}
+h1.contentTitle>span {
+    display: block;
+    font-size: 18px;
+    -webkit-text-stroke: 0px #C9E167; /* 縁取り */
+    text-stroke: 0px #C9E167; /* 縁取り */
+}
+p,dd {
+    text-align: justify;
+}
+
+
+/* header */
+/* ヘッダ部の規定 すべての要素より前に出るようにする */
+/* fixedで画面上部に固定する */
+body>header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0 0 20px 0;
+    box-shadow: 0 -20px 10px 20px rgba(50,50,50,0.25);
+}
+body>header>.inner {
+    position: relative;
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+body>header>.inner>h1 {
+    font-size: 10px;
+    line-height: 20px;
+    color: #AAA;
+}
+#headerLogo {
+    width: 100px;
+    height: 70px;
+    overflow: hidden;
+    display: block;
+    float: left;
+}
+#headerLogo>img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+        position: relative;
+    top: -15px;
+}
+
+/* gnavをブロック要素にして横並べにできるようにする 左端に寄せる*/
+.headerLogo {
+    width: 120px;
+    height: 70px;
+    overflow: hidden;
+    display: block;
+    float: left;
+    line-height: 30px;
+    font-weight: 900;
+    font-size: 18px;
+        margin: auto;
+    margin-left: 5px;
+
+}
+
+.headerLogo>span {
+    font-size: 31px;
+}
+/* gnavをブロック要素にして横並べにできるようにする 左端に寄せる*/
+#gnav {
+    display: block;
+    float: left;
+}
+/* gnavの幅と高さを規定する */
+#gnav ul {
+    width: auto;
+    height: 50px;
+    margin: 0 0 0 50px;
+}
+/* gnavのリスト要素を左寄席にする 各要素の幅高さを規定*/
+#gnav li {
+    float: left;
+    width: 110px;
+    height: 50px;
+    position: relative;
+}
+/* 仕切りの縦線を加える */
+#gnav li:before, 
+#gnav li:last-child:after {
+    content: "";
+    width: 1px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    bottom: 0; 
+    margin: auto;
+    background-color: #DDD;
+}
+/* 仕切り線の前後のスペースを消す */
+#gnav li:before{
+    left: 0;
+}
+#gnav li:last-child:after{
+    right: 0;
+}
+/* ヘッダメニューを整える　文字を中央に */
+#gnav li>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 900;
+    padding: 5px 0;
+    color:#444
+}
+/* ヘッダメニューの日本語をブロック要素にして改行扱い */
+#gnav li>a>span {
+    display: block;
+    font-size: 10px;
+}
+#gnavSp{
+    display: none;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+#toAmeba {
+    color: #4DAC26 !important;
+}
+#headerContact {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 900;
+    width: 235px;
+    height: 50px;
+    float: left;
+    padding: 5px 0;
+    margin: 0 0 0 20px;
+    color: #C9E167;
+}
+#headerContact>p>span {
+    font-size: 11px;
+    color: pink;
+}
+#headerContact>p {
+    font-size: 16px;
+    line-height: 14px;
+    display: block;
+    color: #444;
+    /* background-color: #4DAC26; */
+    padding: 5px;
+    border-radius: 5px;
+}
+#headerContact>a {
+    display: inline-block;
+}
+#headerContactSp,#headerToAmebaSp,#gnavBtn {
+    display: none;
+}
+
+/* 共通のアイコンエフェクト */
+.socialEffect__link {
+  margin: auto;
+  padding-top: 10px;
+  display: block;
+  width: auto;
+  /* height: 30px; */
+  line-height: 60px;
+  /* border-radius: 50%; */
+  /* text-align: center; */
+  position: relative;
+  /* z-index: 1; */
+  /* color: #bfbfbf; */
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform ease-out 0.2s;
+}
+
+.socialEffect__box{
+    width: 100%;
+    height: 30px;
+    /* border: #4DAC26 solid 1px; */
+    transition: transform ease-out 0.5s;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.socialEffect__box img{
+  width: 30px;
+  height: auto;
+  margin: auto;
+  display: inline-block;
+}
+
+
+
+
+
+/* contentWrap */
+#contentWrap{
+    width: 100%;
+    height: auto;
+}
+.inner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: auto;
+}
+.inner.widthBasic,
+#staff .inner.widthDouble {
+    width: 1000px;
+}
+.inner.widthDouble,
+.inner.widthTriple {
+    width: 100%;
+    height: auto;
+    display: table;
+}
+/* display: tableは古い。flexboxを使うこと*/
+.inner.widthDouble>.leftWrap,
+.inner.widthDouble>.rightWrap{
+    width: 50%;
+    display:table-cell;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.inner.widthDouble>.leftWrap>.inner, 
+.inner.widthDouble>.rightWrap>.inner{
+    padding: 60px;
+}
+
+/* introWrap */
+/* slide begin */
+#introWrap {
+}
+#slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+#slide:before {
+    content: "【姿勢を変えて人生を豊かに】";
+    /* width: 60%; */
+    height: 30%;
+    /* max-width: 500px;
+    max-height: 500px; */
+    position: absolute;
+    top: 0;
+    bottom: -90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 900;
+    /* background-image: url(/img/intro/introDeco.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; */
+    background-color: #FFF;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 8%;
+    opacity: 0.5;
+    color: #000;
+    font-weight: 900;
+}
+#slide li {
+    background-size: cover;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+#slide1 {
+    background-image: url(/img/intro/1.jpg);
+}
+#slide2 {
+    background-image: url(/img/intro/2.jpg);
+    margin-top: 5%;
+}
+#slide3 {
+    background-image: url(/img/intro/3.jpg);
+}
+#slide4 {
+    background-image: url(/img/intro/4.jpg);
+}
+#slide5 {
+    background-image: url(/img/intro/5.jpg);
+}
+
+#scroll {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    font-size: 10px;
+    line-height: 20px;
+    color: #FFF;
+    margin: auto;
+    text-align: center;
+    animation: animeScroll 2s ease-in-out infinite; 
+}
+@keyframes animeScroll {
+    0% {bottom: 15px;}
+    50% {bottom: 125px;}
+    100% {bottom: 15px;}
+}
+
+#scroll:before {
+    content: "";
+    width: 2px;
+    height: 10px;
+    background-color: #FFF;
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#scroll:after {
+    content: "";
+    width: 26px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 12px;
+    border: 2px solid #FFF;
+}
+
+
+/* about */
+#about1 .leftWrap {
+    background-image: url(/img/about/1.jpg);
+}
+#about1 .rightWrap>.inner>h2 {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    padding: 0 0 30px 0;
+}
+#about1 .rightWrap>.inner>h2>span {
+    display: block;
+    font-size: 30px;
+    letter-spacing: 0;
+}
+#about1 .rightWrap>.inner>p {
+    padding: 5px 0;
+}
+#about1 .rightWrap>.inner,
+#about2 .leftWrap>.inner {
+    background-image: url(/img/common/bgCircle.png);
+    background-repeat: repeat;
+    background-position: 50% 50%;
+    background-color: #FDFDFD;
+}
+#about2 .rightWrap {
+    background-image: url(/img/about/2.jpg);
+}
+#about2 .leftWrap>.inner li {
+    position: relative;
+    padding: 10px 0 10px 50px;
+    line-height: 20px;
+    text-align: justify; /* 等倍配置*/
+}
+/* 〇を先頭につける */
+#about2 .leftWrap>.inner li:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border: 3px solid;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+/* チェックマークを〇の中につける ボックスの右と下の線を残し、４５度傾ける*/
+#about2 .leftWrap>.inner li:after {
+    content: "";
+    width: 8px;
+    height: 13px;
+    border-bottom: 3px solid;
+    border-right: 3px solid;
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    left: 11px;
+    margin: auto;
+    transform: rotate(45deg);
+}
+
+/* menu */
+.acMenu {
+    width: 1000px;
+    margin: auto;
+}
+/* メニューの上下に線を引く。カーソルも手に変更 */
+.acMenu>dt {
+    background-color: #FFF;
+    cursor: pointer;
+    margin: -1px 0 0;
+    position: relative;
+    border-top: 1px solid #AAA;
+    border-bottom: 1px solid #AAA;
+}
+/* メニューのヘッダを大きくする */
+.acMenu>dt>h2 {
+    font-size: 24px;
+    font-weight: 900;
+    padding: 20px 0 20px 60px;
+}
+/* カーソル当てると背景オレンジに */
+.acMenu>dt:hover>h2{
+    color: #FFF;
+    background-color: #C9E167;
+}
+/* 左に〇をつける */
+.acMenu>dt>h2:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    position: absolute;
+    border: 3px solid;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    margin: auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+/* 各メニューに「実費診療」の文字を上被せしている */
+.acMenu>dt.actualCost>h2:after {
+    content: "実費診療";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    right: 60px;
+    margin: auto;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFF;
+    background-color: #4DAC26;
+    padding: 0px 20px;
+    border-radius: 10px;
+}
+/* メニューをホバーすると「実費診療」も色を変える */
+.acMenu>dt.actualCost:hover>h2:after{
+    background-color: #FFF;
+    color: #4DAC26;
+}
+/* 色変化の時間を延ばす */
+.acMenu>dt>h2,.acMenu>dt.actualCost>h2:after {
+    transition: 1s ease-in-out;
+}
+.acMenu>dt:hover>h2,.acMenu>dt.actualCost:hover>h2:after{
+    transition: 0.1s ease-in-out;
+}
+/* 治療の英字を改行 */
+.acMenu>dt>h2>span {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+}
+/* メニュー右端の〇 */
+.acMenu>dt>span {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    margin: auto;
+    z-index: 1;
+    background: #C9E167;
+    border-radius: 50%;  
+
+}
+/* メニュー右端の〇の中の横棒 */
+.acMenu>dt>span:before, .acMenu>dt>span:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #FFF;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+}
+/* メニュー右端の〇の中の縦棒 */
+.acMenu>dt>span:after {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+/* メニュー右端の〇の中の縦棒横棒が来るっと回転して横棒のみになる */
+.acMenu>dt.active>span:before, .acMenu>dt.active>span:after {
+    transform: rotate(180deg);
+}
+.acMenu>dt.active>span:before {
+    transform: rotate(360deg);
+}
+.acMenu>dd{
+    display: none;
+}
+#menu1 .leftWrap {
+    background-image: url(/img/menu/1.jpg);
+}
+#menu2 .leftWrap {
+    background-image: url(/img/menu/2.jpg);
+}
+#menu3 .leftWrap {
+    background-image: url(/img/menu/3.jpg);
+}
+#menu4 .leftWrap {
+    background-image: url(/img/menu/4.jpg);
+}
+#menu5 .leftWrap {
+    background-image: url(/img/menu/5-161013.jpg);
+}
+#menu6 .leftWrap {
+    background-image: url(/img/menu/6.jpg);
+}
+#menu7 .leftWrap {
+    background-image: url(/img/menu/7.jpg);
+}
+#menu8 .leftWrap {
+    background-image: url(/img/menu/8.jpg);
+}
+/* セリフ調になるよう三角を画像と分の間に加える */
+#menu dd .inner>.rightWrap:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+    margin: auto;
+    background-color: #FFF;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 1;
+}
+#menu .inner.widthDouble>.leftWrap>.inner, #menu .inner.widthDouble>.rightWrap>.inner {
+    padding: 60px 0 60px 60px;
+}
+#menu1 p {
+    padding: 5px 0;
+}
+#menu .inner.widthDouble>.rightWrap>.inner>dl {
+    padding: 0 0 20px 0;
+}
+/* 針きゅう治療　定義リストのtermに下線を引く */
+#menu .inner.widthDouble>.rightWrap>.inner>dl>dt {
+    font-weight: 900;
+    border-bottom: 1px solid #AAA;
+    margin: 20px 0 10px 0;
+    padding: 5px 0;
+    position: relative;
+    font-size: 16px;
+}
+/* 針きゅう治療　ulに幅を持たせる */
+#menu .inner.widthDouble>.rightWrap>.inner>ul {
+    padding: 20px 0;
+}
+#menu .inner.widthDouble>.rightWrap>.inner ul>li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+    line-height: 20px;
+}
+/* 訪問介護 リストの左に〇つける */
+#menu .inner.widthDouble>.rightWrap>.inner ul>li:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: #C9E167;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+#menu .inner.widthDouble>.rightWrap>.inner ul.noMarkList>li{
+    padding: 5px 0;
+}
+#menu .inner.widthDouble>.rightWrap>.inner ul.noMarkList>li:before,
+#menu .inner.widthDouble>.rightWrap>.inner ul.costList>li:before{
+    display: none;
+}
+/* 訪問リハビリ 破線の下線 */
+#menu .inner.widthDouble>.rightWrap>.inner>dl>dd>span {
+    display: block;
+    border-bottom: 1px dashed #AAA;
+    padding: 5px 0;
+    margin: 0 0 5px 0;
+    font-weight: 900;
+}
+/* 美顔針 メリットの空白もうける */
+#menu .inner.widthDouble>.rightWrap>.inner>dl>dt.melit {
+    padding: 5px 0 5px 80px;
+}
+/* 美顔針 メリットをオレンジで囲む */
+#menu .inner.widthDouble>.rightWrap>.inner>dl>dt.melit:before {
+    content: "メリット";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    color: #FFF;
+    background-color: #C9E167;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+    width: 70px;
+    height: 20px;
+     border-radius: 10px;
+}
+/* 針きゅう診療　先頭文字をオレンジで囲む */
+#menu .inner.widthDouble>.rightWrap>.inner ul>li>span {
+    padding: 0 10px;
+    background-color: #C9E167;
+    color: #FFF;
+    margin: 0 10px 0 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+/* instagram */
+#instagram {
+    text-align:center;
+}
+#instagram>iframe {
+    width: 80%;
+}
+
+/* staff */
+#staff .inner.widthDouble .inner {
+    min-height: 600px;
+}
+/* 画像と説明の間のひし形を生成 */
+#staff>ul>li:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+#staff>ul>li>.inner{
+    width: 50%;
+}
+/* 奇数行の場合、左にマージン50％をとる。右端のみpaddingなし */
+#staff>ul>li:nth-child(odd)>.inner {
+    margin: 0 0 0 50%;
+    padding: 60px 0 60px 60px;
+}
+/* 偶数行の場合、右にマージン50％をとる。左端のみpaddingなし */
+#staff>ul>li:nth-child(even)>.inner {
+    margin: 0 50% 0 0;
+    padding: 60px 60px 60px 0;
+}
+/* asideの領域に幅高さを設定しないと画像表示されない。画像は幅いっぱい出す */
+#staff>ul>li>aside {
+    width: 50%;
+    height: 100%;
+    /* min-height: 360px; */
+    display: block;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    top: 0;
+}
+#staff>ul>li:nth-child(odd)>aside{left: 0}
+#staff>ul>li:nth-child(even)>aside{right: 0}
+#hisanori_motoike>aside{
+    background-image: url(/img/staff/hisanori_motoike.jpg);
+}
+#shoYoshida>aside{
+    background-image: url(/img/staff/staff2.png);
+}
+#tatsuomiOgawa>aside{
+    background-image: url(/img/staff/staffTatsuomiOgawa.jpg);
+}
+#yasushiKawakatsu>aside{
+    background-image: url(/img/staff/staffYasushiKawakatsu.jpg);
+}
+#manaNishitani>aside{
+    background-image: url(/img/staff/staffManaNishitani.jpg);
+}
+#misonoKimura>aside{
+    background-image: url(/img/staff/staffMisonoKimura.jpg);
+}
+#kaoriOgawa>aside{
+    background-image: url(/img/staff/staffKaoriOgawa.jpg);
+}
+#saekoYamazaki>aside{
+    background-image: url(/img/staff/staffSaekoYamazaki.jpg);
+}
+#staff h2 {
+    font-size: 20px;
+    font-weight: 900;
+    border-bottom: 1px solid #AAA;
+    padding: 0 0 10px 0;
+    margin: 0 0 10px 0;
+}
+#staff h2>span {
+    font-size: 12px;
+    padding: 0 0 0 20px;
+}
+
+/* access */
+#access>.inner {
+    padding: 0 0 120px 0;
+}
+/* アクセス情報の左側領域を定義 */
+#access .leftWrap {
+    width: 40%;
+    float: left;
+    padding: 0 60px 0 0;
+}
+/* アクセス情報の右側領域を定義 */
+#access .rightWrap {
+    width: 60%;
+    float: right;
+}
+#clinicInfo {
+    width: 100%;
+    height: auto;
+}
+/* 院名の下に余白 */
+#clinicInfo>li>h2 {
+    padding: 0 0 10px 0;
+}
+/* 交通アクセスの枠を囲む */
+#clinicInfo>li>span {
+    display: block;
+    border: 1px solid;
+    padding: 10px 20px;
+    line-height: 24px;
+    position: relative;
+    margin: 14px 0 0 0;
+    border-radius: 4px;
+}
+/* 交通アクセスの枠に吹き出し口をつくる */
+#clinicInfo>li>span:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    border-top: 1px solid #444;
+    border-left: 1px solid #444;
+    position: absolute;
+    top: -6px;
+    left: 30px;
+    transform: rotate(45deg);
+}
+#open {
+    overflow: hidden;
+    border-radius: 4px;
+}
+/* 営業日の文字を白に */
+#open * {
+    text-align: center;
+    color: #FFF;
+    font-weight: 900;
+}
+/*  */
+#open tr {
+    display: table;
+    width: 100%;
+    height: auto;
+}
+/* 行の仕切り線を作る */
+#open tr:nth-child(2) {
+    margin: 1px 0;
+}
+/* 営業日テーブルの背景色をオレンジに */
+#open th, #open td {
+    width: 11%;
+    background-color: #C9E167;
+    display: table-cell;
+    padding: 10px 0;
+}
+/* 営業日テーブルの左端の幅を広げる */
+#open th.open, #open td.open {
+    width: 23%;
+}
+/* 営業日テーブルの中の文字を小さくする */
+#open td>span {
+    font-size: 14px;
+}
+#mapWrap {
+    height: 450px;
+}
+
+/* recruit */
+#recruit .inner.widthBasic>div {
+    display: table;
+    padding: 0 0 60px 0;
+}
+#recruit .inner.widthBasic>div>h2 {
+    width: 20%;
+    display: table-cell;
+    vertical-align: top;
+    font-size: 24px;
+    font-weight: 900;
+    position: relative;
+    padding: 0 0 0 20px;
+}
+#recruit .inner.widthBasic>div>h2:before {
+    content: "";
+    width: 8px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #AAA;
+}
+#recruit .inner.widthBasic>div>h2>span{
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+}
+#recruit .inner.widthBasic>div>p {
+    width: 80%;
+    display: table-cell;
+}
+
+
+
+
+#recruitDetail tr {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #AAA;
+}
+#recruitDetail tr:first-child {
+    border-top: 1px solid #AAA;
+}
+#recruitDetail tr>th, #recruitDetail tr>td {
+    display: table-cell;
+    padding: 15px 0;
+}
+#recruitDetail tr>th {
+    width: 20%;
+    vertical-align: top;
+}
+#recruitDetail tr>td {
+    width: 80%;
+}
+
+/* footer */
+body>footer {
+    width: 100%;
+    height: auto;
+    margin: 60px 0 0 0;
+    border-top: 1px solid #AAA;
+    position: relative;
+}
+body>footer>.inner {
+    padding: 20px 0;
+    position: relative;
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+#pagetop {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#pagetop>a {
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    color: #AAA;
+    margin: 0 auto;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+}
+
+body>footer>.inner>ul {
+    width: 230px;
+    height: 40px;
+    overflow: hidden;
+    float: left;
+}
+body>footer>.inner>ul>li {
+    float: left;
+    width: 100px;
+    height: 40px;
+    margin: 0 0 0 30px;
+    position: relative;
+}
+body>footer>.inner>ul>li:first-child {
+    margin: 0;
+}
+body>footer a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 画像の大きさを小さく */
+body>footer a>img {
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+#copyright {
+    width: 250px;
+    height: 40px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    text-align: right;
+    padding: 14px 0 14px 60px;
+    float: right;
+    /* background-image: url(/img/footer/sukoyakaLogo.png);
+    background-size: 60px auto;
+    background-repeat: no-repeat;
+    background-position: 0 50%; */
+}
+.bnrWrap{
+    margin-top: 30px;
+}
+.bnrWrap>ul {
+    display: table;
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+.bnrWrap>ul>li {
+    display: table-cell;
+    padding: 0 15px;
+}
+.bnrWrap>ul>li:first-child{padding-left: 30px;}
+.bnrWrap>ul>li:last-child{padding-right: 30px;}
+.bnrWrap>ul>li>img {
+    width: 100%;
+    height: auto;
+}
+/* media query 640pxä»¥ä¸‹ */
+@media only screen and (max-width: 640px){
+}
+
+
+
+

@@ -1,0 +1,467 @@
+@media only screen and (max-width: 800px){
+    body {
+        min-width: 0;
+        width: 100%;
+    }
+    /* SP用に余白を縮める */
+    h1.contentTitle {
+        padding: 100px 0 60px 3px;
+    }
+    h1.contentTitle:before {
+        bottom: -140px;
+    }
+    .inner.widthBasic, #staff .inner.widthDouble {
+        width: 100%;
+    }
+
+    /* common */
+    .sectionWrap {
+        margin: 0 0 -60px 0;
+    }
+
+    /* intro */
+    #slide{margin: 60px 0 0 0;}
+    #slide:before {
+        width: 95%;
+        /* bottom: 0; */
+        padding-top: 6%;
+    }
+    #introWrap {
+        height: 350px !important;
+    }
+    #scroll {
+        display: none;
+    }
+
+    /* header */
+    body>header {
+        padding: 0;
+    }
+    body>header>.inner {
+        width: 100%;
+        height: 60px;
+        position: relative;
+    }
+    body>header>.inner>h1 {
+        display: none;
+    }
+    #headerLogo {
+        width: 100px;
+        height: 100%;
+        float: left;
+        position: relative;
+        top: 0;
+        left: 10px;
+    }
+    #headerLogo>img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .headerLogo {
+        width: 100px;
+        height: 100%;
+        float: left;
+        position: relative;
+        /* top: 0;*/   
+        left: 10px; 
+    }
+
+    #gnav{
+        display: none;
+    }
+    #gnavSp {
+        display: none;
+        float: none;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        position: fixed;
+    }
+    #gnavSp ul {
+        width: 100%;
+        height: 80%;
+        max-height: 400px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 0 30px;
+    }
+    #gnavSp li {
+        float: none;
+        width: 100%;
+        height: 20%;
+        position: relative;
+    }
+    #gnavSp li:before {
+        content: "";
+        position: absolute;
+        background-color: #DDD;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+    }
+    #gnavSp li:last-child:before{
+        display: none;
+    }
+    #gnavSp li>a {
+        position: absolute;
+        height: 40px;
+        top: 0;
+        bottom: 10px;
+        margin: auto;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 900;
+        padding: 5px 0;
+        color: #444;
+    }
+    #gnavSp li>a>span {
+        display: block;
+        font-size: 12px;
+    }
+    #headerContactSp,#headerToAmebaSp,#gnavBtn {
+        display: block;
+    }
+    /* スマホ版gnavを表示するためのボタンを表示させていく */
+    /* ボタンの領域事態は50pxとする */
+    #gnavBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100%;
+        z-index: 1000;
+    }
+    /* 余白を残して×ボタンの領域を枠決めする */
+    #gnavBtn>span {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        left: 50%;
+        cursor: pointer;
+        margin-top: -1px;
+        margin-left: -13px;
+    }
+    /* 横線を引く */
+    #gnavBtnIcon {
+        display: block;
+        position: absolute;
+        width: 26px;
+        height: 2px;
+        background-color: #444;
+        transition: all 0.2s ease;
+    }
+    #gnavBtnIcon:before, #gnavBtnIcon:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 2px;
+        background-color: #444;
+        transition: all 0.3s ease;
+    }
+    #gnavBtnIcon:before, #gnavBtnIcon:after {
+        width: 26px;
+    }
+    #gnavBtnIcon:before {
+        margin-top: -10px;
+    }
+    #gnavBtnIcon:after {
+        margin-top: 8px;
+    }
+    #gnavBtn .close {
+        background: transparent;
+    }
+    #gnavBtn .close:before {
+        transform: rotate(-45deg);
+        width: 30px;
+    }
+    #gnavBtn .close:after {
+        transform: rotate(-135deg);
+        width: 30px;
+    }
+    #gnavBtn .close:before, #gnavBtn .close:after {
+        margin-top: 0;
+    }
+
+
+    #headerContact {
+        display: none;
+    }
+    #headerContactSp,#headerToAmebaSp{
+        position: absolute;
+        top: 0;
+        /* width: 50px; */
+        height: 60px;
+        font-size: 10px;
+        line-height: 20px;
+        font-weight: 900;
+        padding: 5px 0 0 0;
+        text-align: center;
+        /* background-size: 25px auto;
+        background-repeat: no-repeat;
+        background-position: 50% 10px; */
+    }
+    #headerContactSp {
+        right: 100px;
+        color: #444;
+        background-image: url(/img/header/iconTel.png);
+    }
+    .socialEffect__boxSp{
+        width: 100%;
+        height: 30px;
+        /* border: #4DAC26 solid 1px; */
+        transition: transform ease-out 0.5s;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    .socialEffect__boxSp img{
+    width: 30px;
+    height: auto;
+    margin: auto;
+    display: inline-block;
+    }
+
+    /* about */
+    /* block要素にすることでSP用に縦配置にする。WEB用はtable要素 */
+    .inner.widthDouble>.leftWrap, .inner.widthDouble>.rightWrap {
+        display: block;
+        width: 100%;
+    }
+    .inner.widthDouble>.leftWrap>.inner, .inner.widthDouble>.rightWrap>.inner {
+        padding: 30px;
+    }
+    /* 画像の高さを縮める */
+    #about1 .leftWrap, #about2 .rightWrap {
+        height: 400px;
+    }
+    /* 画像の初期位置をちょっと上にする */
+    #about1 .leftWrap {
+        background-position: 50% 30%;
+    }
+    /* about2の１番目の要素にするためposition:absoluteのtop:0px */
+    #about2 .rightWrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /* about2の2番目の要素にするため画像の高さ分下げる flexboxならもっと簡単なのに*/
+    #about2 .leftWrap>.inner {
+        margin-top: 250px;
+    }
+    #about1 .rightWrap>.inner>h2 {
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        border-bottom: 2px solid;
+        padding: 0 0 20px 0;
+        margin: 0 0 30px 0;
+    }
+    #about1 .rightWrap>.inner>h2>span {
+        font-size: 22px;
+    }
+
+    /* menu */
+    .acMenu{
+        width: 100%;
+    }
+    /* SP用に文字を小さく */
+    .acMenu>dt>h2 {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 20px 30px;
+    }
+    .acMenu>dt>h2>span{
+        font-size: 10px;
+        line-height: 12px;
+        padding: 3px 0;
+    }
+    /* 左の〇を消す */
+    .acMenu>dt>h2:before{
+        display: none;
+    }
+    /* 「実費診療」場所を左下に移動 */
+    .acMenu>dt.actualCost>h2:after {
+        top: initial;
+        bottom: 0;
+        left: 0;
+        right: initial;
+        width: auto;
+        height: 16px;
+        font-size: 10px;
+        line-height: 16px;
+        padding: 0px 30px;
+        border-radius: 0 10px 0 0;
+    }
+    /* 以下は効いていない */
+    #menu .inner.widthDouble>.leftWrap>.inner, #menu .inner.widthDouble>.rightWrap>.inner {
+        padding: 30px;
+    }
+    /* メニューの写真の高さを低く  */
+    #menu1 .leftWrap,#menu2 .leftWrap,#menu3 .leftWrap,#menu4 .leftWrap,#menu5 .leftWrap,#menu6 .leftWrap,#menu7 .leftWrap,#menu8 .leftWrap {
+        height: 250px;
+    }
+    /* メニュー２の表示位置を変更　上にずらして拡大表示 */
+    #menu2 .leftWrap {
+        background-position: 0% 100%;
+        background-size: 120% auto;
+    }
+    #menu3 .leftWrap {
+        background-position: 50% 100%;
+    }
+
+    /* instagram */
+    #instagram {
+        text-align:center;
+    }
+    #instagram>iframe {
+        width: 95%;
+    }
+
+    /* staff */
+    #staff>ul>li>.inner {
+        margin: 0 !important;
+        padding: 30px !important;
+        width: 100%;
+        min-height: 0 !important;
+    }
+    /* 画像が浮いていたのを親要素からの位置で表示するよう修正している */
+    #staff>ul>li>aside {
+        /* width: 100%; */
+        position: relative;
+        /* height: 400px; */
+        min-height: 250px;
+        background-position: 50% 0%;
+        margin: auto;
+    }
+    /* スタッフ写真の高さを短く */
+    #staff>ul>li:before {
+        top: 240px;
+        bottom: initial;
+    }
+
+    /* access */
+    #access>.inner {
+        padding: 0 0 60px 0;
+    }
+    /* floatを解除し、縦並びに */
+    #access .leftWrap, #access .rightWrap {
+        float: none;
+        width: 100%;
+    }
+    /* 余白を設定 */
+    #access .leftWrap {
+        padding: 30px 30px 60px 30px;
+    }
+    #access .rightWrap {
+        padding: 0 30px;
+    }
+    /* 営業日テーブルの縦横を入れ替え　縦長になるように */
+    #open {
+        padding: 10px;
+        background-color: #C9E167;
+    }
+    #open tr {
+        display: block;
+        width: 35%;
+        float: left;
+        margin: 0 !important;
+    }
+    #open tr:first-child {
+        width: 30%;
+    }
+    #open th, #open td {
+        display: block;
+        width: 100%;
+        float: left;
+        height: 40px;
+        line-height: 20px;
+        padding: 10px 0;
+        font-size: 16px;
+        border-bottom: 1px solid;
+        /* -webkit-text-stroke: 1px #bdd55f;
+        text-stroke: 1px #000; */
+        /* font-weight: 900; */
+    }
+    #open th:last-child, #open td:last-child {
+        border-bottom: none;
+    }
+    #open th.open, #open td.open {
+        width: 100%;
+
+    }
+
+    #mapWrap{
+        height: 250px;
+    }
+
+
+    /* recruit */
+    #recruit .inner.widthBasic>div {
+        padding: 0 0 30px 0;
+    }
+    #recruit .inner.widthBasic>div>h2, #recruit .inner.widthBasic>div>p {
+        display: block;
+        width: 100%;
+    }
+    #recruit .inner.widthBasic>div>h2{
+        padding: 0 50px;
+    }
+    #recruit .inner.widthBasic>div>h2:before {
+        left: 30px;
+        height: 50px;
+        bottom: 0;
+        margin: auto;
+    }
+    #recruit .inner.widthBasic>div>p {
+        padding: 30px;
+    }
+    #recruitDetail {
+        padding: 30px;
+    }
+    #recruitDetail tr>th{
+        width: 40%;
+    }
+    #recruitDetail tr>td{
+        width: 60%;
+    }
+
+    /* footer */
+    body>footer {
+        margin: 120px 0 0 0;
+    }
+    /* ページトップの位置を上に移動 */
+    #pagetop{top: -60px}
+    /* ページトップの背景色をオレンジに */
+    #pagetop>a {
+        width: 100%;
+        border: none;
+        background-color: #C9E167;
+        border-radius: 0;
+        color: #FFF;
+        height: 60px;
+        padding: 10px 0;
+    }
+    body>footer>.inner {
+        width: 100%;
+    }
+    /* フッターの画像を中央寄せに変更 */
+    body>footer>.inner>ul {
+        float: none;
+        margin: auto;
+    }
+    #copyright {
+        float: none;
+        margin: 5px auto 0;
+    }
+}
