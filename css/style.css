@@ -349,7 +349,7 @@ body>header>.inner>h1 {
     right: 0;
     margin: auto;
     z-index: 900;
-    /* background-image: url(./img/intro/introDeco.png);
+    /* background-image: url(/img/intro/introDeco.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%; */
@@ -369,20 +369,20 @@ body>header>.inner>h1 {
     height: 100%;
 }
 #slide1 {
-    background-image: url(./img/intro/1.jpg);
+    background-image: url(/img/intro/1.jpg);
 }
 #slide2 {
-    background-image: url(./img/intro/2.jpg);
+    background-image: url(/img/intro/2.jpg);
     margin-top: 5%;
 }
 #slide3 {
-    background-image: url(./img/intro/3.jpg);
+    background-image: url(/img/intro/3.jpg);
 }
 #slide4 {
-    background-image: url(./img/intro/4.jpg);
+    background-image: url(/img/intro/4.jpg);
 }
 #slide5 {
-    background-image: url(./img/intro/5.jpg);
+    background-image: url(/img/intro/5.jpg);
 }
 
 #scroll {
@@ -432,7 +432,7 @@ body>header>.inner>h1 {
 
 /* about */
 #about1 .leftWrap {
-    background-image: url(./img/about/1.jpg);
+    background-image: url(/img/about/1.jpg);
 }
 #about1 .rightWrap>.inner>h2 {
     font-size: 24px;
@@ -451,13 +451,13 @@ body>header>.inner>h1 {
 }
 #about1 .rightWrap>.inner,
 #about2 .leftWrap>.inner {
-    background-image: url(./img/common/bgCircle.png);
+    background-image: url(/img/common/bgCircle.png);
     background-repeat: repeat;
     background-position: 50% 50%;
     background-color: #FDFDFD;
 }
 #about2 .rightWrap {
-    background-image: url(./img/about/2.jpg);
+    background-image: url(/img/about/2.jpg);
 }
 #about2 .leftWrap>.inner li {
     position: relative;
@@ -619,28 +619,28 @@ body>header>.inner>h1 {
     display: none;
 }
 #menu1 .leftWrap {
-    background-image: url(./img/menu/1.jpg);
+    background-image: url(/img/menu/1.jpg);
 }
 #menu2 .leftWrap {
-    background-image: url(./img/menu/2.jpg);
+    background-image: url(/img/menu/2.jpg);
 }
 #menu3 .leftWrap {
-    background-image: url(./img/menu/3.jpg);
+    background-image: url(/img/menu/3.jpg);
 }
 #menu4 .leftWrap {
-    background-image: url(./img/menu/4.jpg);
+    background-image: url(/img/menu/4.jpg);
 }
 #menu5 .leftWrap {
-    background-image: url(./img/menu/5-161013.jpg);
+    background-image: url(/img/menu/5-161013.jpg);
 }
 #menu6 .leftWrap {
-    background-image: url(./img/menu/6.jpg);
+    background-image: url(/img/menu/6.jpg);
 }
 #menu7 .leftWrap {
-    background-image: url(./img/menu/7.jpg);
+    background-image: url(/img/menu/7.jpg);
 }
 #menu8 .leftWrap {
-    background-image: url(./img/menu/8.jpg);
+    background-image: url(/img/menu/8.jpg);
 }
 /* セリフ調になるよう三角を画像と分の間に加える */
 #menu dd .inner>.rightWrap:before {
@@ -802,28 +802,28 @@ body>header>.inner>h1 {
 #staff>ul>li:nth-child(odd)>aside{left: 0}
 #staff>ul>li:nth-child(even)>aside{right: 0}
 #hisanori_motoike>aside{
-    background-image: url(./img/staff/hisanori_motoike.jpg);
+    background-image: url(/img/staff/hisanori_motoike.jpg);
 }
 #shoYoshida>aside{
-    background-image: url(./img/staff/staff2.png);
+    background-image: url(/img/staff/staff2.png);
 }
 #tatsuomiOgawa>aside{
-    background-image: url(./img/staff/staffTatsuomiOgawa.jpg);
+    background-image: url(/img/staff/staffTatsuomiOgawa.jpg);
 }
 #yasushiKawakatsu>aside{
-    background-image: url(./img/staff/staffYasushiKawakatsu.jpg);
+    background-image: url(/img/staff/staffYasushiKawakatsu.jpg);
 }
 #manaNishitani>aside{
-    background-image: url(./img/staff/staffManaNishitani.jpg);
+    background-image: url(/img/staff/staffManaNishitani.jpg);
 }
 #misonoKimura>aside{
-    background-image: url(./img/staff/staffMisonoKimura.jpg);
+    background-image: url(/img/staff/staffMisonoKimura.jpg);
 }
 #kaoriOgawa>aside{
-    background-image: url(./img/staff/staffKaoriOgawa.jpg);
+    background-image: url(/img/staff/staffKaoriOgawa.jpg);
 }
 #saekoYamazaki>aside{
-    background-image: url(./img/staff/staffSaekoYamazaki.jpg);
+    background-image: url(/img/staff/staffSaekoYamazaki.jpg);
 }
 #staff h2 {
     font-size: 20px;
@@ -1055,7 +1055,7 @@ body>footer a>img {
     text-align: right;
     padding: 14px 0 14px 60px;
     float: right;
-    /* background-image: url(./img/footer/sukoyakaLogo.png);
+    /* background-image: url(/img/footer/sukoyakaLogo.png);
     background-size: 60px auto;
     background-repeat: no-repeat;
     background-position: 0 50%; */

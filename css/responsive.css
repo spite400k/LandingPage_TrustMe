@@ -214,7 +214,7 @@
     #headerContactSp {
         right: 100px;
         color: #444;
-        background-image: url(./img/header/iconTel.png);
+        background-image: url(/img/header/iconTel.png);
     }
     .socialEffect__boxSp{
         width: 100%;
